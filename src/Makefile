@@ -4,7 +4,13 @@ LIB=../lib
 
 CFLAGS=-O2 -Werror -Wuninitialized
 
-LIBS=algx.o 
+LIBS=algx.o \
+     bz2_codec.o \
+     fpzip_codec.o \
+     fastpfor_codec.o \
+     gzip_codec.o \
+     zfp_codec.o \
+     zlib_codec.o 
 
 .SUFFIXES:
 
