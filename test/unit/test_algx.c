@@ -7,5 +7,5 @@ void test_alg_add(void)
     TEST_ASSERT_EQUAL(3, r);
 
     r = alg_add(-1, 2);
-    TEST_ASSERT_EQUAL(5, r);
+    TEST_ASSERT_EQUAL(1, r);
 }
