@@ -6,7 +6,13 @@ TEST_NAMES=$(TEST_SRC:.c=)
 PREFIX=Runner_
 RUNNERS=$(addprefix $(PREFIX),$(TESTS))
 
-NO_PRE_SRC_FILES= algx.c 
+NO_PRE_SRC_FILES= algx.c \
+		  bz2_codec.c \
+		  fastpfor_codec.c \
+		  fpzip_codec.c \
+		  gzip_codec.c \
+		  zfp_codec.c \
+		  zlib_codec.c 
 
 SRC_FILES=$(addprefix $(SRC),$(NO_PRE_SRC_FILES))
 
