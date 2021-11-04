@@ -1,4 +1,5 @@
 UNITY_ROOT=./unity
+ZLIB_ROOT=../../lib/zlib/
 CC=gcc
 SRC=../../src/
 TEST_SRC=$(wildcard *.c)
@@ -24,6 +25,7 @@ all: clean $(TEST_NAMES) test
 	$(CC) -Werror -g -o $@ \
 	    -I$(UNITY_ROOT) \
 	    -I$(SRC) \
+	    -L$(ZLIB_ROOT) \
 	    -DTEST $(UNITY_ROOT)/unity.c \
 	    $(SRC_FILES) \
 	    $@.c $@_Runner.c 
