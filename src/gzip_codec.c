@@ -2,8 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <errno.h>
-//#include <zlib.h>
-#include "/home/krsc0813/projects/gwas-compress-c/lib/zlib/zlib.h"
+#include <zlib.h>
 #include "gzip_codec.h"
 
 // CHUNK is the size of the memory chunk used by the zlib routines.

@@ -26,9 +26,12 @@ all: clean $(TEST_NAMES) test
 	    -I$(UNITY_ROOT) \
 	    -I$(SRC) \
 	    -L$(ZLIB_ROOT) \
+	    -L$(FPZIP_ROOT) \
 	    -DTEST $(UNITY_ROOT)/unity.c \
 	    $(SRC_FILES) \
-	    $@.c $@_Runner.c 
+	    $@.c $@_Runner.c \
+	    -lz \
+	    -lfpzip 
 
 test:
 	$(foreach var,$(TEST_NAMES),./$(var);)
