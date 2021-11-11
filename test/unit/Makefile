@@ -1,5 +1,6 @@
 UNITY_ROOT=./unity
 ZLIB_ROOT=../../lib/zlib/
+FPZIP_ROOT=../../lib/fpzip/
 CC=gcc
 SRC=../../src/
 TEST_SRC=$(wildcard *.c)
@@ -7,8 +8,7 @@ TEST_NAMES=$(TEST_SRC:.c=)
 PREFIX=Runner_
 RUNNERS=$(addprefix $(PREFIX),$(TESTS))
 
-NO_PRE_SRC_FILES= algx.c \
-		  bz2_codec.c \
+NO_PRE_SRC_FILES= bz2_codec.c \
 		  fastpfor_codec.c \
 		  fpzip_codec.c \
 		  gzip_codec.c \
@@ -30,8 +30,7 @@ all: clean $(TEST_NAMES) test
 	    -DTEST $(UNITY_ROOT)/unity.c \
 	    $(SRC_FILES) \
 	    $@.c $@_Runner.c \
-	    -lz \
-	    -lfpzip 
+	    -lz 
 
 test:
 	$(foreach var,$(TEST_NAMES),./$(var);)

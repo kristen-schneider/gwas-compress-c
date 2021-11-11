@@ -4,8 +4,7 @@ LIB=../lib
 
 CFLAGS=-O2 -Werror -Wuninitialized
 
-LIBS=algx.o \
-     bz2_codec.o \
+LIBS=bz2_codec.o \
      fpzip_codec.o \
      fastpfor_codec.o \
      gzip_codec.o \
