@@ -1,8 +1,8 @@
 #include "unity.h"
 #include "gzip_codec.h"
 
-void test_compressWithGzip(void)
+void test_compress_with_gzip(void)
 {
-    int r = compressWithGzip();
+    int r = compress_with_gzip();
     TEST_ASSERT_EQUAL(0, r);
 }

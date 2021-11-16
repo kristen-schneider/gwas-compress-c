@@ -1,8 +1,8 @@
 #include "unity.h"
 #include "bz2_codec.h"
 
-void test_compressWithBz2(void)
+void test_compress_with_bz2(void)
 {
-    int r = compressWithBz2();
+    int r = compress_with_bz2();
     TEST_ASSERT_EQUAL(0, r);
 }
