@@ -2,7 +2,7 @@
 #include "bz2_codec.h"
 #include "bzlib.h"
 
-int compressWithBz2()
+int compress_with_bz2()
 {
     return 0;
 }

@@ -2,7 +2,7 @@
 #include "zlib_codec.h"
 #include "zlib.h"
 
-int compressWithZlib()
+int compress_with_zlib()
 {
     return 0;
 }

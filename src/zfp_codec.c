@@ -2,7 +2,7 @@
 #include "zfp_codec.h"
 //#include "zfp.h"
 
-int compressWithZfp()
+int compress_with_zfp()
 {
     return 0;
 }
