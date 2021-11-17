@@ -8,20 +8,11 @@
  *  @author Kristen Schneider
  */
 
-struct input_file *input_file_init(char *file_name)
+void file_data_free(void **v)
 {
-    struct input_file *i = (struct input_file *)
-            malloc(sizeof(struct input_file));
-    if (i == NULL)
-        err(1, "malloc error in input_file_init().");
-
-    i->file_name = strdup(file_name);
-
-    // .bed.gz
-        if ( (strlen(i->file_name) > 7) && 
-            strcmp(".bed.gz", file_name + strlen(i->file_name) - 7) == 0)
-        {
-            i->type = BED;
-        }
+    struct file_data **fd = (struct file_data **)v;
+    free((*fd)->file_name);
+    free(*fd);
+    *fd = NULL;
 }
-    
+

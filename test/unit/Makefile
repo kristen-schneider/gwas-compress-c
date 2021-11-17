@@ -12,6 +12,7 @@ NO_PRE_SRC_FILES= bz2_codec.c \
 		  fastpfor_codec.c \
 		  fpzip_codec.c \
 		  gzip_codec.c \
+		  read_file.c \
 		  zfp_codec.c \
 		  zlib_codec.c 
 

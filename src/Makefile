@@ -8,6 +8,7 @@ LIBS=bz2_codec.o \
      fpzip_codec.o \
      fastpfor_codec.o \
      gzip_codec.o \
+     read_file.o \
      zfp_codec.o \
      zlib_codec.o 
 
