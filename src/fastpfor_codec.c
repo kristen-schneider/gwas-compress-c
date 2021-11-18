@@ -6,6 +6,9 @@
 //#include "FastPFor/headers/deltautil.h"
 
 int main() {
+    using namespace FastPForLib;
+    
+    // Select a CODEC
     IntegerCODEC &codec = *CODECFactory::getFromName("simdfastpfor256");
 }
 
