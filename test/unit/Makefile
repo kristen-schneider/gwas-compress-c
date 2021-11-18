@@ -1,6 +1,7 @@
 UNITY_ROOT=./unity
 ZLIB_ROOT=../../lib/zlib/
 FPZIP_ROOT=../../lib/fpzip/
+HTSLIB_ROOT=../../lib/htslib/
 CC=gcc
 SRC=../../src/
 TEST_SRC=$(wildcard *.c)
@@ -12,7 +13,6 @@ NO_PRE_SRC_FILES= bz2_codec.c \
 		  fastpfor_codec.c \
 		  fpzip_codec.c \
 		  gzip_codec.c \
-		  read_file.c \
 		  zfp_codec.c \
 		  zlib_codec.c 
 
@@ -26,12 +26,15 @@ all: clean $(TEST_NAMES) test
 	$(CC) -Werror -g -o $@ \
 	    -I$(UNITY_ROOT) \
 	    -I$(SRC) \
+	    -I$(HTSLIB_ROOT)/include/ \
 	    -L$(ZLIB_ROOT) \
 	    -L$(FPZIP_ROOT) \
+	    -L$(HTSLIB_ROOT)/lib/ \
 	    -DTEST $(UNITY_ROOT)/unity.c \
 	    $(SRC_FILES) \
 	    $@.c $@_Runner.c \
-	    -lz 
+	    -lz \
+	    -lhts
 
 test:
 	$(foreach var,$(TEST_NAMES),./$(var);)
