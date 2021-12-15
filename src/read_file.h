@@ -17,7 +17,6 @@ struct file_data
     double mean_interval_size;
 };
 
-void file_data_free(void **v);
 
 
 #endif
