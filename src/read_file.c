@@ -2,11 +2,14 @@
 #include <sysexits.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 #include "read_file.h"
 
 /** @file read_file.c Read in file with proper checks
  *  @author Kristen Schneider
  */
+ 
+
 
 struct input_file *input_file_init(char *file_name)
 {
@@ -17,17 +20,19 @@ struct input_file *input_file_init(char *file_name)
         err(1, "malloc error in input_file_init().");
 
     i->file_name = strdup(file_name);
+
     // checking input file naming to see if extension is .tsv.gz
     if ( (strlen(i->file_name) > 7) &&
             strcmp(".tsv.gz", file_name + strlen(i->file_name) - 7) == 0) {
         i->type = TSV;
-
-    else {
+    } else {
         fprintf(stderr, "File type not supported '%s'.\n", i->file_name);
         free(i->file_name);
         free(i);
         return NULL;
     }
+}
+/*
 
     // if input file is of type tsv, initialize allocated memory to zero
     if (i->type == TSV) {
@@ -43,5 +48,5 @@ struct input_file *input_file_init(char *file_name)
             return NULL;
         }
 
-        i->last_offset = 0;
-}   
+        i->last_offset = 0;   
+*/
