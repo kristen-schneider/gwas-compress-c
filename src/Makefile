@@ -9,7 +9,8 @@ LIBS=bz2_codec.o \
      fastpfor_codec.o \
      gzip_codec.o \
      zfp_codec.o \
-     zlib_codec.o 
+     zlib_codec.o \
+     read_file.o
 
 .SUFFIXES:
 

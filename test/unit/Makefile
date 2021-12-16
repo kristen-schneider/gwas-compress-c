@@ -14,7 +14,8 @@ NO_PRE_SRC_FILES= bz2_codec.c \
 		  fpzip_codec.c \
 		  gzip_codec.c \
 		  zfp_codec.c \
-		  zlib_codec.c 
+		  zlib_codec.c \
+		  read_file.c 
 
 SRC_FILES=$(addprefix $(SRC),$(NO_PRE_SRC_FILES))
 

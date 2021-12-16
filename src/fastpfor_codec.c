@@ -5,12 +5,12 @@
 //#include "FastPFor/headers/codecfactory.h"
 //#include "FastPFor/headers/deltautil.h"
 
-int main() {
-    using namespace FastPForLib;
+//int main() {
+//    using namespace FastPForLib;
     
     // Select a CODEC
-    IntegerCODEC &codec = *CODECFactory::getFromName("simdfastpfor256");
-}
+//    IntegerCODEC &codec = *CODECFactory::getFromName("simdfastpfor256");
+//}
 
 int compress_with_fastpfor(){   
     return 0;
